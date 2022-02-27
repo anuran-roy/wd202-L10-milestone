@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Create Task{% endblock %}
+{% block content %}
+<a href="/tasks/"
+  ><button
+    style="align: right"
+    class="m-4 p-4 h-15 text-red-700 transition-colors duration-150 border border-red-500 rounded-lg focus:shadow-outline hover:bg-red-500 hover:text-red-100"
+  >
+    Go Back
+  </button></a
+>
+<center>
+  <h2 class="m-4 p-4 text-4xl font-bold">Update Task</h2>
+  <form method="POST" action="/update-task/{{object.id}}/">
+    {% csrf_token %}
+    <div class="container m-2 p-2">
+      <p id="formTitle" class="m-1 p-1">
+        {{form.title.label}}:<br />{{form.title}}
+      </p>
+      <br />
+      <p id="formDescription" class="m-1 p-1">
+        {{form.description.label}}:<br />{{form.description}}
+      </p>
+      <br />
+      <p id="formStatus" class="m-1 p-1">
+        {{form.status.label}}:&nbsp;&nbsp;&nbsp;&nbsp;{{form.status}}
+      </p>
+      <br />
+      <button
+        type="submit"
+        class="mx-4 px-4 bg-[#EF4444] hover:bg-[#EF1111] text-white font-bold text-2xl py-2 px-4 rounded w-96"
+      >
+        Update Task
+      </button>
+    </div>
+  </form>
+</center>
+{% endblock %}

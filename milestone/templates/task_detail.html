@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Task Detail{% endblock %}
+{% block content %}
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="text-4xl font-bold m-3 p-1">Title:</h2>
+    <p class="text-lg m-3 p-1">{{object.title}}</p>
+    <p>
+      <b class="text-lg font-bold m-3 p-1">Created On:</b>
+      {{object.created_date}}<br />
+      <b class="text-lg font-bold m-3 p-1">Priority:</b> {{object.priority}}
+    </p>
+    <br />
+    <h2 class="text-4xl font-bold m-3 p-1">Description:</h2>
+    <p class="text-lg m-3 p-1">{{object.description}}</p>
+{% endblock %}
