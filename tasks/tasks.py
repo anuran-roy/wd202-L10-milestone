@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 
 from celery.decorators import periodic_task
 from celery.schedules import crontab
-from task_manager.celery import app
+from tasks.celery import app
 
 
 def mail_user(user: User):
