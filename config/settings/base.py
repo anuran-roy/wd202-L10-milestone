@@ -44,7 +44,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres:///milestone",
+        default="postgres://gvxynxopoittzq:6ff4d93099dc61bdd32ffae2b4e24e779c110f35dbf69c1f629e5d0c0515129b@ec2-54-157-160-218.compute-1.amazonaws.com:5432/d2gvlfiq8orrec",  # "postgres:///milestone",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
